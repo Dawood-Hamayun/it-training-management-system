@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9d5f3f90b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <title>Document</title>
+    <style>
+        .card{
+            display: block;
+            width: 100;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <a href="#" class = "navbar-brand mx-3"><h4>IT Training Management System</h4></a>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header bg-primary text-white">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <i class="fa fa-book fa-5x"></i>
+                            </div>
+                            <div class="col">
+                                <h3 class = "display-3">01</h3>
+                                <h3>Courses</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <h5>
+                            <a href = "/course" class = "text-primary "> Add Course <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                        <h5>
+                            <a href = "/course/view" class = "text-primary"> View Courses <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                        <h5>
+                            <a href = "/course/search-course" class = "text-primary"> Search Courses <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header bg-primary text-white">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <i class="fa fa-graduation-cap fa-5x"></i>
+                            </div>
+                            <div class="col">
+                                <h3 class = "display-3">02</h3>
+                                <h3>Trainee</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5>
+                            <a href = "/trainee" class = "text-primary"> Add Trainee <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                        <h5>
+                            <a href = "/trainee/view" class = "text-primary"> View Trainee <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                        <h5>
+                            <a href = "/trainee/search-trainee" class = "text-primary"> Search Trainee <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header bg-primary text-white">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <i class="fa fa-school fa-5x"></i>
+                            </div>
+                            <div class="col">
+                                <h3 class = "display-3">03</h3>
+                                <h3>Instructor</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5>
+                            <a href = "/instructor" class = "text-primary"> Add Instructor <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                        <h5>
+                            <a href = "/instructor/view" class = "text-primary"> View Instructors <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                        <h5>
+                            <a href = "/instructor/search-instructor" class = "text-primary"> Search Instructors <i class = "fa fa-arrow-alt-circle-right"></i></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+
+        </div> <!--Ends the row-->
+
+        <div class="container my-3">
+            <div class="row">
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Enroll A student into a Course</h5>
+                    <p class="card-text">Check out and enroll into all the availabe courses in this training program.</p>
+                    <a href="/enrollment" class="btn btn-primary">Get Started</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Assign A Teaching Team to a Course</h5>
+                    <p class="card-text">Check out all the available teams and successfully assign teachers to the course.</p>
+                    <a href="/teaches" class="btn btn-primary">Get Started</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Assign Teachers to a Teaching Team</h5>
+                    <p class="card-text">Check out all the available teams and successfully assign teachers to a teaching team.</p>
+                    <a href="/teachingteam-instructor" class="btn btn-primary">Get Started</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Create a New Teaching Team</h5>
+                    <p class="card-text">Click on this button to create a brand new teaching team.</p>
+                    <a href="/teachingteam" class="btn btn-primary">Get Started</a>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          
+    </div>
+
+    
+</body>
+</html>

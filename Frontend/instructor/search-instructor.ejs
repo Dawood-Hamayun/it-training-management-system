@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+</head>
+<body>
+
+    <h1>Search here</h1>
+    <form action = "/instructor/search">
+        <input type ="search" name = "name" placeholder = "Search Name">
+        <input type = "submit" value ="Search"> <br>
+    </form>
+
+    <h1>Instructors List</h1>
+
+    <table border ='1' width = '100%'>
+        <tr>
+            <th>Instructor ID</th>
+            <th>Name</th>
+        </tr>
+        <% if(instructor.length > 0) { %>
+            <% for (var i = 0; i<instructor.length; i++) {%>
+                <tr>
+                    <td><%- instructor[i].instructor_id  %> </td>
+                    <td><%- instructor[i].name  %> </td>
+                </tr>
+            
+            <% } %> 
+        
+        <% } else{ %>
+            <tr>
+                <td>Data Not Found.</td>
+            </tr>
+        <% } %> 
+    </table>
+    
+</body>
+</html>

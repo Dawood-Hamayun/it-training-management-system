@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <style>
+        
+        th,td{
+            padding: 15px;
+            text-align: left;
+            font-size: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+       
+        a{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <table width = '100%'>
+        <tr>
+            <th>Instructor ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Major</th>
+            <th>Actions</th>
+        </tr>
+        <% if(instructor.length > 0) { %>
+            <% for (var i = 0; i<instructor.length; i++) {%>
+                <tr>
+                    <td><%- instructor[i].instructor_id  %> </td>
+                    <td><%- instructor[i].name  %> </td>
+                    <td><%- instructor[i].address  %> </td>
+                    <td><%- instructor[i].major  %> </td>
+                    <td><a href ="/instructor/delete-instructor?instructor_id=<%- instructor[i].instructor_id  %>">Delete</a></td>
+                    <td><a href ="/instructor/update-instructor?instructor_id=<%- instructor[i].instructor_id  %>">Update</a></td>   
+                </tr>
+            
+            <% } %> 
+        
+        <% } else{ %>
+            <h1>Instructor Data Not Found. </h1>
+        <% } %> 
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+</head>
+<body>
+
+    <h1>Search here</h1>
+    <form action = "/trainee/search">
+        <input type ="search" name = "name" placeholder = "Search Name">
+        <input type ="search" name = "email" placeholder = "Search Email">
+        <input type = "submit" value ="Search"> <br>
+    </form>
+
+    <h1>Trainees List</h1>
+
+    <table border ='1' width = '100%'>
+        <tr>
+            <th>Trainee ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+        <% if(trainee.length > 0) { %>
+            <% for (var i = 0; i<trainee.length; i++) {%>
+                <tr>
+                    <td><%- trainee[i].trainee_id  %> </td>
+                    <td><%- trainee[i].name  %> </td>
+                    <td><%- trainee[i].email%> </td>
+                    <td><%- trainee[i].age  %> </td>
+                </tr>
+            
+            <% } %> 
+        
+        <% } else{ %>
+            <tr>
+                <td>Data Not Found.</td>
+            </tr>
+        <% } %> 
+    </table>
+    
+</body>
+</html>

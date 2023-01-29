@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h2 class ="text-center">Update Instructor</h2>
+                <br>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <input type="hidden" class= "form-control"  name="instructor_id" value = "<%= instructor[0].instructor_id %>">
+                    </div>
+                    
+
+                    <div class="form-group text-center">
+                        <input type="text" class= "form-control"  name="name" value = "<%= instructor[0].name %>" placeholder = "Enter name" required><br><br>
+                    </div>
+                    
+                    <div class="form-group text-center">
+                        <input type="text" class= "form-control"  name="address" value = "<%= instructor[0].address %>" placeholder = "Enter the address" required><br><br>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <input type="text" class= "form-control"  name="major" value = "<%= instructor[0].major %>" placeholder = "Enter the major" required><br><br>
+                    </div>
+
+                    <div class="forn-group text-center">
+                        <button type="submit" name = "Submit" class="btn btn-info fa-3x btn-lg">Submit</button> 
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h2 class ="text-center">Update Trainee</h2>
+                <br>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <input type="hidden" class = "form-control" name="trainee_id" value = "<%= trainee[0].trainee_id %>">
+                    </div>
+                    
+
+                    <div class="form-group text-center">
+                        <input type="text" class = "form-control" name="name" value = "<%= trainee[0].name %>" placeholder = "Enter name" required><br><br>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <input type="text" class = "form-control" name="email" value = "<%= trainee[0].email %>"placeholder = "Enter email" required><br><br>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <input type="text" class = "form-control" name="address" value = "<%= trainee[0].address %>"placeholder = "Enter the address" required><br><br>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <input type="text" class = "form-control" name="age" value = "<%= trainee[0].age %>" placeholder = "Enter age" required><br><br>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <input type="text" class = "form-control" name="gender" value = "<%= trainee[0].gender %>"placeholder = "Enter gender" required><br><br>
+                    </div>
+                    
+
+                    <div class="forn-group text-center">
+                        <button type="submit" name = "Submit" class="btn btn-info fa-3x btn-lg">Submit</button> 
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

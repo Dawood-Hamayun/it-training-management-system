@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Teaching Team</title>
+</head>
+<body>
+    <form action="" method="POST">
+    <div class="container">
+        <h1 class="text-center text-primary mt-3 mb-3">Choose Instructor ID and Team ID</h1>
+
+        <div class="card">
+            <div class="card-header">Dropdown Menu</div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <select name="course_id" class = 'form-control'>
+                        <option value="">Select Course ID</option>
+                        <%for (var i = 0; i<course.length; i++) {%>
+                            <option value="<%= course[i].course_id %>">
+                            <%= course[i].course_id %></option>
+                        <% }%>
+                    </select>
+                    <br>
+                    <div class="mb-3">
+                        <select name="trainee_id" class = "form-control">
+                            <option value="">Select Trainee ID</option>
+                            <%for (var i = 0; i<trainee.length; i++) {%>
+                                <option value="<%= trainee[i].trainee_id %>">
+                                <%= trainee[i].trainee_id %></option>
+                            <% }%>
+                        </select>
+                    </div>
+                </div>
+                <div class="forn-group text-center">
+                    <button type="submit" name = "Submit" class="btn btn-info fa-3x btn-lg">Submit</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+</body>

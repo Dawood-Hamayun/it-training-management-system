@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <style>
+        
+        th,td{
+            padding: 15px;
+            text-align: left;
+            font-size: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+       
+        a{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <table width = '100%'>
+        <tr>
+            <th>Teaching Team ID</th>
+            <th>Actions</th>
+        </tr>
+        <% if(teachingteam.length > 0) { %>
+            <% for (var i = 0; i<teachingteam.length; i++) {%>
+                <tr>
+                    <td><%- teachingteam[i].teaching_team_id  %> </td>
+                    <td><a href ="/teachingteam/delete-teachingteam?teaching_team_id=<%- teachingteam[i].teaching_team_id  %>">Delete</a></td>
+                </tr>
+            
+            <% } %> 
+        
+        <% } else{ %>
+            <h1>Data Not Found. </h1>
+        <% } %> 
+    </table>
+    
+</body>
+</html>
